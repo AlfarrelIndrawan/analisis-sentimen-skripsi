@@ -23,7 +23,7 @@ def preprocessing(message):
 	message = message.strip(" ")
 	message = formalize_translate(message)
 	message = stopword_removal(message)
-	message = emoji.get_emoji_regexp().sub(r'', message)
+	message = emoji.replace_emoji(message, '')
 	factory = StemmerFactory()
 	stemmer = factory.create_stemmer()
 	message = stemmer.stem(message)
