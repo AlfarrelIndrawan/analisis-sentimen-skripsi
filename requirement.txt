@@ -1,0 +1,4 @@
+# Requirements
+emoji
+Sastrawi
+pickle
