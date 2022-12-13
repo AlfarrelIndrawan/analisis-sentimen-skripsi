@@ -1,4 +1,4 @@
 # Requirements
 emoji
 Sastrawi
-pickle
+deep-translator
