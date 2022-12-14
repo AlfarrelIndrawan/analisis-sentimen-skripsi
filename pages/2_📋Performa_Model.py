@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from PIL import Image
 
 st.header("Performa Model")
 st.markdown("Performa model dari model SVM yang digunakan")
@@ -24,6 +25,11 @@ df['Precision'] = df['Precision'].map("{:,.2f}".format)
 df['Recall'] = df['Recall'].map("{:,.2f}".format) 
 df['F1-Score'] = df['F1-Score'].map("{:,.2f}".format) 
 st.table(df)
+
+# Score Image
+st.subheader("Bar Chart Hasil Evaluasi Skor")
+image = Image.open("bar-chart-hasil-skor.png")
+st.image(image)
 
 # Heatmap
 st.subheader("Confusion Matrix Heatmap")
