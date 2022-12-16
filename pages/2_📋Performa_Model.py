@@ -5,7 +5,10 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 st.header("Performa Model")
-st.markdown("Performa model dari model SVM yang digunakan")
+st.markdown("Performa model dari model Support Vector Machine yang digunakan")
+
+st.subheader("Penjelasan Performa Model")
+st.markdown("Hasil evaluasi skor dari model yang dibuat mempunyai hasil yang bagus dikarenakan memiliki nilai accuracy dan F1-Score yang tinggi. Nilai accuracy dan F1-Score yang tinggi berarti model dapat memprediksi ulasan dengan akurat dan memiliki tingkat kesalahan yang rendah. Pada aspek harga, kenyamanan, pelayanan, dan rasa memiliki nilai accuracy dan F1-Score di atas 90% sedangkan aspek umum memiliki nilai sekitar 82%. Accuracy dan F1-Score yang rendah pada aspek umum bisa terjadi dikarenakan ulasan dengan aspek umum memiliki variatif teks yang tinggi dan ulasan pada aspek umum memiliki kata-kata yang mirip dengan ulasan pada aspek lain.")
 
 st.subheader("Evaluasi Akurasi dan F1-Score")
 # CSS to inject contained in a string
