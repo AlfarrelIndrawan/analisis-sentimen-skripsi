@@ -1,0 +1,11 @@
+Streamlit
+Github: https://github.com/AlfarrelIndrawan/analisis-sentimen-skripsi
+Hasil: https://alfarrelindrawan-analisis-sentimen-skr-klasifikasi-model-h1tnen.streamlit.app/
+
+Penjelasan Streamlit
+1. Hasil model dilakukan packaging dengan pickle
+2. Hasil pickle diunduh dan disimpan dalam bentuk .sav
+3. Membuat source code untuk halaman utama yang bernama Klasifikasi_Model.py
+4. Membuat halaman lain pada folder pages yang bernama Glosarium.py dan Performa_Model.py
+5. Membuat repository GitHub
+6. Hosting di Streamlit Cloud

@@ -62,10 +62,10 @@ def vectorize_message(vectorizer, message):
 	dftfidf=pd.DataFrame(denselist, columns=feature_names)
 	return dftfidf
 
-st.title("Klasifikasi Ulasan")
-st.markdown("Masukkan ulasan pelanggan untuk mendapatkan hasil klasifikasi")
-form = st.form("klasifikasi-form")
-message = form.text_area("Ulasan")
+st.title("Review Classification")
+st.markdown("Input customer's review to get classification result")
+form = st.form("classification-form")
+message = form.text_area("Review")
 submit = form.form_submit_button('Submit')
 
 aspek_model = pickle.load(open('aspek_classifier.sav', 'rb'))
@@ -73,12 +73,12 @@ sentimen_model = pickle.load(open('sentimen_classifier.sav', 'rb'))
 vectorizer = pickle.load(open('vectorizer.sav', 'rb'))
 
 if submit:
-	st.subheader("Hasil Klasifikasi")
+	st.subheader("Classification Result")
 	message = preprocessing(message)
 	dftidf = vectorize_message(vectorizer, message)
-	with st.spinner('Harap menunggu...'):
+	with st.spinner('Please Wait...'):
 		time.sleep(3)
 	result_aspek = aspek_model.predict(dftidf)[0]
-	st.write("Klasifikasi Aspek: ", result_aspek)
+	st.write("Aspect: ", result_aspek)
 	result_sentimen = sentimen_model.predict(dftidf)[0]
-	st.write("Klasifikasi Sentimen: ", result_sentimen)
+	st.write("Sentiment: ", result_sentimen)
